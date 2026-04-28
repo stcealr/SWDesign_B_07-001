@@ -1,7 +1,6 @@
 ```mermaid
 classDiagram
     <<Boundary>>
-    }
 
     class User {
         -id: String
