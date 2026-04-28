@@ -1,7 +1,4 @@
-```mermaid
 classDiagram
-    <<Boundary>>
-
     class User {
         -id: String
         -pw: String
@@ -23,6 +20,10 @@ classDiagram
         +computeBalance() long
     }
 
+    class BankUI {
+        <<Boundary>>
+    }
+
     %% 관계 설정
-    BankUI ..>  Account : 의존 (계좌 서비스 호출)
+    BankUI ..> Account : 의존 (계좌 서비스 호출)
     Account ..> User : 의존 (입출금 시 searchUser 호출)
